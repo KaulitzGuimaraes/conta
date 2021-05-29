@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h2>HTML Forms</h2>
+
+    <form >
+      <label for="lname">Electric Bill:</label><br>
+      <input type="text" id="eletricBill" placeholder="111.22" value=""><br><br>
+      <button type="button" onclick="callEm()"> Submit</button>
+    </form> 
+    
+    <h3 id="result"></h3>
+
+  
+  </body>
+  <script>
+      let callEm = () => {
+        const BY_TWO = 2
+        let rent = 1773.27 / BY_TWO
+        console.log(rent)
+        let wifiBilling =  90 / BY_TWO
+        console.log(wifiBilling)
+        let eletricBill = parseFloat(document.getElementById('eletricBill').value) / BY_TWO
+        console.log(eletricBill)
+        var result_ = (rent - eletricBill) +  wifiBilling
+        console.log(result_)
+        document.getElementById('result').innerText = result_
+
+      }
+     
+    </script>
+</html>
